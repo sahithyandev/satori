@@ -2,7 +2,7 @@ import React from 'react'
 import { it, describe, expect } from 'vitest'
 
 import { initFonts, toImage } from './utils'
-import satori from '../src'
+import { satori } from '../src'
 
 // TODO: no support for 'text-decoration' or 'outline'
 
