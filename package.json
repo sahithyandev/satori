@@ -1,6 +1,6 @@
 {
   "name": "@sahithyan/satori",
-  "version": "0.0.45",
+  "version": "0.1.1",
   "description": "Enlightened library to convert HTML and CSS to SVG.",
   "module": "./dist/index.js",
   "main": "./dist/index.js",
