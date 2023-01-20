@@ -24,10 +24,10 @@
   },
   "scripts": {
     "dev": "concurrently \"pnpm dev:default\" \"pnpm dev:wasm\"",
-    "dev:default": "cross-env NODE_ENV=development tsup src/index.ts --watch --ignore-watch playground",
-    "dev:wasm": "cross-env WASM=1 NODE_ENV=development tsup src/index.ts --watch --ignore-watch playground",
+    "dev:default": "NODE_ENV=development tsup src/index.ts --watch --ignore-watch playground",
+    "dev:wasm": "WASM=1 NODE_ENV=development tsup src/index.ts --watch --ignore-watch playground",
     "dev:playground": "turbo dev --filter=satori-playground...",
-    "build": "cross-env NODE_ENV=production pnpm run build:default && pnpm run build:wasm",
+    "build": "NODE_ENV=production pnpm run build:default && pnpm run build:wasm",
     "build:default": "tsup",
     "build:wasm": "WASM=1 tsup",
     "test": "NODE_ENV=test vitest run --outputTruncateLength=9999999",
@@ -78,7 +78,6 @@
   },
   "dependencies": {
     "@shuding/opentype.js": "1.4.0-beta.0",
-    "cross-env": "^7.0.3",
     "css-background-parser": "^0.1.0",
     "css-box-shadow": "1.0.0-3",
     "css-to-react-native": "^3.0.0",
