@@ -29,13 +29,13 @@
     "dev:playground": "turbo dev --filter=satori-playground...",
     "build": "cross-env NODE_ENV=production pnpm run build:default && pnpm run build:wasm",
     "build:default": "tsup",
-    "build:wasm": "cross-env WASM=1 tsup",
-    "test": "cross-env NODE_ENV=test vitest run --outputTruncateLength=9999999",
-    "dev:test": "cross-env NODE_ENV=test vitest --update --outputTruncateLength=9999999",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --quiet",
+    "build:wasm": "WASM=1 tsup",
+    "test": "NODE_ENV=test vitest run --outputTruncateLength=9999999",
+    "dev:test": "NODE_ENV=test vitest --update --outputTruncateLength=9999999",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --quiet --cache",
     "lint:fix": "pnpm lint --fix",
     "prettier-check": "prettier --check .",
-    "prettier-fix": "prettier --write ."
+    "prettier-fix": "prettier --write . --cache"
   },
   "repository": {
     "type": "git",
@@ -84,7 +84,7 @@
     "css-to-react-native": "^3.0.0",
     "emoji-regex": "^10.2.1",
     "postcss-value-parser": "^4.2.0",
-    "yoga-layout-prebuilt": "^1.10.0"
+    "yoga-wasm-web": "^0.3.0"
   },
   "packageManager": "pnpm@7.11.0",
   "engines": {
