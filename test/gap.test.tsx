@@ -2,7 +2,7 @@ import React from 'react'
 import { it, describe, expect } from 'vitest'
 
 import { initYogaWasm, toImage } from './utils'
-import satori from '../src'
+import { satori } from '../src'
 
 initYogaWasm()
 
