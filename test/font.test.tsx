@@ -1,9 +1,8 @@
 import { join } from 'node:path'
-import React from 'react'
 import { it, describe, expect } from 'vitest'
 
-import { initFonts, toImage } from './utils'
-import { satori } from '../src'
+import { initFonts, toImage } from './utils.js'
+import { satori } from '../src/index.js'
 import { readFile } from 'node:fs/promises'
 
 describe('Font', () => {
